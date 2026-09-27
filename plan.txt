@@ -1,0 +1,20 @@
+1 : prender_carbon : 500 :
+2 : comprar_carne : 1200 :
+3 : comprar_pan : 300 :
+4 : comprar_bebidas : 700 :
+5 : preparar_salsas : 450 :
+6 : asar_longaniza : 800 : 1, 2
+7 : preparar_ensalada : 600 : 3, 5
+8 : enfriar_bebidas : 1000 : 4
+9 : cocinar_carne : 1500 : 1, 2
+10 : preparar_choripan : 500 : 6, 3
+11 : preparar_empanadas : 1300 : 2
+12 : montar_ensalada : 400 : 7
+13 : servir_bebidas : 300 : 8
+14 : preparar_platos : 600 : 10, 11
+15 : poner_mesa : 700 : 12, 14
+16 : terminar_carne : 500 : 9
+17 : montar_parrilla : 400 : 6, 16
+18 : servir_comida : 800 : 15, 17
+19 : servir_postre : 500 : 18
+20 : terminar_celebracion : 300 : 13, 18, 19
