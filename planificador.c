@@ -15,7 +15,7 @@ struct Actividad {
     int ID_Actividad;
     char Nombre_Actividad[200];
     int Tiempo;
-    int Dependencias[200];
+    char Dependencias[200];
 };
 
 int main (int argc, char *argv[]){
@@ -36,12 +36,30 @@ int main (int argc, char *argv[]){
   
   if (archivo!=NULL){
     while(fgets(linea, sizeof(linea), archivo)){
-    
+    //printf("%s\n",linea);
     struct Actividad a;
+    char arr[4][200];
     char *token= strtok(linea, ":");
-    printf("%s\n",token);
-    a.ID_Actividad=atoi(token);
-    
+    int seg=0;
+      for(int i =0; i<4;i++){
+        if(i>0){
+        token= strtok(NULL,":");
+        }
+        if(i==2 && token[0]==' '&&token[1]==' '){
+        seg= rand() % 4901 +100;
+        sprintf(arr[i],"%d",seg);
+        continue;
+        }
+        strcpy(arr[i],token);
+      }
+      a.ID_Actividad=atoi(arr[0]);
+      strcpy(a.Nombre_Actividad,arr[1]);
+      a.Tiempo=atoi(arr[2]);
+      strcpy(a.Dependencias,arr[3]);
+      printf("ID: %d\n",a.ID_Actividad);
+      printf("Actividad: %s\n",a.Nombre_Actividad);
+      printf("Tiempo (m/s): %d\n",a.Tiempo);
+      printf("Dependencias: %s\n",a.Dependencias);
     }
     
   }
