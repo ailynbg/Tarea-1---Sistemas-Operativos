@@ -17,7 +17,8 @@ Para poder ejecutarlo ya con un plan.txt y dentro de la carpeta con el código d
 gcc -Wall -Wextra -std=c17 planificador.c -o planificador
 ./planificador plan.txt K (K cualquier numero que desee limitar al programa)
 
-DISEÑO DEL PROGRAMA
+DISEÑO DEL PROGRAMA<br>
+
 Para el trabajo se ocuparon diferentes comandos, variables y funciones, algunos son:
 fork(): Para poder ejecutar cada actividad sea un proceso independiente
 pipes(): poder tener comunicacion entre hijos y padre para avisar el termino de la ejecucion.
